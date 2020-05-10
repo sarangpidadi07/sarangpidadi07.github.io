@@ -3371,10 +3371,10 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: auto;
+    overflow: scroll;
 }
 canvas {
-    position:absolute;
+    position:fixed;
     top:0;
     left:0
 }

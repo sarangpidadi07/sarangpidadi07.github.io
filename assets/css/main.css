@@ -3357,11 +3357,13 @@ input, select, textarea {
   to{border-right-color: transparent;}
 }
 
-<!--
+
+/*
 body {
  background-image: url("background.jpg");
 } 
--->
+*/
+
 @import compass
 
 

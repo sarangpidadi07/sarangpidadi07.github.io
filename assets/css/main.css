@@ -3374,7 +3374,7 @@ body, html {
     overflow: scroll;
 }
 canvas {
-    position:fixed;
+    position:relative;
     top:0;
     left:0
 }

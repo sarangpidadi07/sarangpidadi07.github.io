@@ -1,13 +1,38 @@
+import LineIcon from "@/components/LineIcon";
 import Reveal from "@/components/Reveal";
 import SiteHeader from "@/components/SiteHeader";
 
 const buildSteps = [
-  "Understand",
-  "Architecture",
-  "Data & APIs",
-  "Interface",
-  "Build",
-  "Refine",
+  {
+    title: "Understand",
+    detail: "Requirements, workflows, constraints, and what success looks like.",
+    icon: "idea" as const,
+  },
+  {
+    title: "Design",
+    detail: "Architecture, data models, boundaries, and system behavior.",
+    icon: "architecture" as const,
+  },
+  {
+    title: "Build",
+    detail: "Frontend, backend, APIs, integrations, and reliable workflows.",
+    icon: "code" as const,
+  },
+  {
+    title: "Secure",
+    detail: "Authentication, authorization, validation, and data isolation.",
+    icon: "shield" as const,
+  },
+  {
+    title: "Refine",
+    detail: "Performance, usability, maintainability, and operational quality.",
+    icon: "refine" as const,
+  },
+  {
+    title: "Scale",
+    detail: "Modularity, reuse, observability, and room for long-term growth.",
+    icon: "scale" as const,
+  },
 ];
 
 const technologies = [
@@ -73,47 +98,77 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="developer-console" aria-hidden="true">
-            <div className="console-bar">
-              <div className="console-dots">
-                <span />
-                <span />
-                <span />
-              </div>
-              <span>engineer.ts</span>
+          <div
+            className="system-visual"
+            role="img"
+            aria-label="Animated software build system showing an idea becoming architecture, interfaces, APIs, data, security, and a shipped product"
+          >
+            <div className="system-visual-header">
+              <span>Software build system</span>
+              <span className="system-status">
+                <i aria-hidden="true" />
+                iterating
+              </span>
             </div>
-            <pre className="console-code">
-              <code>
-                <span className="code-muted">01</span>{" "}
-                <span className="code-keyword">const</span> engineer = {"{"}
-                {"\n"}
-                <span className="code-muted">02</span>{"   "}name:{" "}
-                <span className="code-string">&quot;Sarang Pidadi&quot;</span>,
-                {"\n"}
-                <span className="code-muted">03</span>{"   "}focus: [
-                <span className="code-string">&quot;SaaS&quot;</span>,{" "}
-                <span className="code-string">&quot;Enterprise&quot;</span>,{" "}
-                <span className="code-string">&quot;Product&quot;</span>],
-                {"\n"}
-                <span className="code-muted">04</span>{"   "}strengths: [
-                <span className="code-string">&quot;Architecture&quot;</span>,{" "}
-                <span className="code-string">&quot;APIs&quot;</span>,{" "}
-                <span className="code-string">&quot;Data&quot;</span>],
-                {"\n"}
-                <span className="code-muted">05</span>{"   "}principles: [
-                <span className="code-string">&quot;secure&quot;</span>,{" "}
-                <span className="code-string">&quot;maintainable&quot;</span>,{" "}
-                <span className="code-string">&quot;scalable&quot;</span>],
-                {"\n"}
-                <span className="code-muted">06</span> {"}"};
-                {"\n\n"}
-                <span className="code-muted">07</span>{" "}
-                <span className="code-comment">
-                  // build → measure → refine
+
+            <div className="system-canvas">
+              <svg
+                className="system-lines"
+                viewBox="0 0 520 420"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path d="M260 208 L132 92" />
+                <path d="M260 208 L388 92" />
+                <path d="M260 208 L92 218" />
+                <path d="M260 208 L428 218" />
+                <path d="M260 208 L142 336" />
+                <path d="M260 208 L378 336" />
+              </svg>
+
+              <div className="system-core">
+                <span className="system-core-icon">
+                  <LineIcon name="idea" size={22} />
                 </span>
-                <span className="code-caret">▋</span>
-              </code>
-            </pre>
+                <strong>Product idea</strong>
+                <small>turn intent into a system</small>
+              </div>
+
+              <div className="system-node node-architecture">
+                <LineIcon name="architecture" size={18} />
+                <span>Architecture</span>
+              </div>
+              <div className="system-node node-interface">
+                <LineIcon name="code" size={18} />
+                <span>Interface</span>
+              </div>
+              <div className="system-node node-api">
+                <LineIcon name="code" size={18} />
+                <span>APIs</span>
+              </div>
+              <div className="system-node node-data">
+                <LineIcon name="architecture" size={18} />
+                <span>Data</span>
+              </div>
+              <div className="system-node node-security">
+                <LineIcon name="shield" size={18} />
+                <span>Security</span>
+              </div>
+              <div className="system-node node-ship">
+                <LineIcon name="scale" size={18} />
+                <span>Ship & scale</span>
+              </div>
+
+              <span className="system-pulse pulse-a" aria-hidden="true" />
+              <span className="system-pulse pulse-b" aria-hidden="true" />
+              <span className="system-pulse pulse-c" aria-hidden="true" />
+            </div>
+
+            <div className="system-visual-footer">
+              <span>01 invent</span>
+              <span>02 engineer</span>
+              <span>03 improve</span>
+            </div>
           </div>
         </section>
 
@@ -154,7 +209,6 @@ export default function Home() {
 
             <div className="timeline" aria-label="Professional experience">
               <article className="timeline-item">
-                <p className="timeline-date">Apr 2025 — Present</p>
                 <h3>Astrybit</h3>
                 <p className="timeline-role">
                   Independent Software Engineer (Full Stack)
@@ -168,7 +222,6 @@ export default function Home() {
               </article>
 
               <article className="timeline-item">
-                <p className="timeline-date">Dec 2021 — Mar 2025</p>
                 <h3>Dell Technologies</h3>
                 <p className="timeline-role">Software Engineer 1</p>
                 <p>
@@ -180,7 +233,6 @@ export default function Home() {
               </article>
 
               <article className="timeline-item">
-                <p className="timeline-date">Jan 2021 — Oct 2021</p>
                 <h3>Vebsigns</h3>
                 <p className="timeline-role">Software Developer / Intern</p>
                 <p>
@@ -196,17 +248,32 @@ export default function Home() {
         <section className="build-section">
           <Reveal className="shell">
             <div className="build-heading">
-              <p className="section-kicker section-kicker-light">
-                How I build
+              <div>
+                <p className="section-kicker section-kicker-light">
+                  How I build
+                </p>
+                <h2>Engineering is a connected process.</h2>
+              </div>
+              <p className="build-intro">
+                I move from understanding the problem to designing the system,
+                building the right boundaries, securing the data, and refining
+                what ships.
               </p>
-              <h2>From problem to product.</h2>
             </div>
 
             <ol className="build-flow">
               {buildSteps.map((step, index) => (
-                <li key={step}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <strong>{step}</strong>
+                <li key={step.title}>
+                  <div className="build-card-top">
+                    <span className="build-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="build-icon">
+                      <LineIcon name={step.icon} size={21} />
+                    </span>
+                  </div>
+                  <strong>{step.title}</strong>
+                  <p>{step.detail}</p>
                 </li>
               ))}
             </ol>
@@ -385,7 +452,7 @@ export default function Home() {
               <p className="section-kicker">Education</p>
               <h2>Master of Computer Applications</h2>
               <p>
-                Savitribai Phule Pune University · 2021 · 8.3 CGPA
+                Savitribai Phule Pune University · 2021
                 <br />
                 Indira College of Engineering and Management, Pune
               </p>
@@ -403,34 +470,56 @@ export default function Home() {
         </Reveal>
 
         <section id="contact" className="contact-section">
-          <div className="contact-mark" aria-hidden="true">
-            <span />
-          </div>
           <Reveal className="shell contact-inner">
-            <p className="section-kicker section-kicker-light">Contact</p>
-            <h2>
-              Let&apos;s talk<span>.</span>
-            </h2>
-            <p className="contact-copy">
-              Have an opportunity, project, or interesting engineering problem?
-            </p>
-            <div className="contact-links">
+            <div className="contact-copy-block">
+              <p className="section-kicker">Contact</p>
+              <h2>Let&apos;s build something useful.</h2>
+              <p className="contact-copy">
+                Open to software engineering opportunities, product work, and
+                interesting technical problems.
+              </p>
+            </div>
+
+            <div className="contact-links" aria-label="Contact links">
               <a href="mailto:sarangpidadi07@gmail.com">
-                Email <span aria-hidden="true">↗</span>
+                <span className="contact-icon">
+                  <LineIcon name="mail" size={20} />
+                </span>
+                <span>
+                  <small>Email</small>
+                  <strong>sarangpidadi07@gmail.com</strong>
+                </span>
+                <span className="contact-arrow" aria-hidden="true">↗</span>
               </a>
+
               <a
                 href="https://www.linkedin.com/in/sarang-pidadi-144160116/"
                 target="_blank"
                 rel="noreferrer"
               >
-                LinkedIn <span aria-hidden="true">↗</span>
+                <span className="contact-icon">
+                  <LineIcon name="link" size={20} />
+                </span>
+                <span>
+                  <small>LinkedIn</small>
+                  <strong>Professional profile</strong>
+                </span>
+                <span className="contact-arrow" aria-hidden="true">↗</span>
               </a>
+
               <a
                 href="https://github.com/sarangpidadi07"
                 target="_blank"
                 rel="noreferrer"
               >
-                GitHub <span aria-hidden="true">↗</span>
+                <span className="contact-icon">
+                  <LineIcon name="github" size={20} />
+                </span>
+                <span>
+                  <small>GitHub</small>
+                  <strong>Code & projects</strong>
+                </span>
+                <span className="contact-arrow" aria-hidden="true">↗</span>
               </a>
             </div>
           </Reveal>

@@ -36,37 +36,76 @@ export default function Home() {
 
       <main id="top">
         <section className="hero shell" aria-labelledby="hero-title">
-          <div className="hero-photo-wrap" aria-hidden="true">
-            <div className="hero-photo-shape">
-              <img
-                className="hero-photo"
-                src="/images/profile.jpg"
-                alt=""
-                width="520"
-                height="520"
-              />
-            </div>
-          </div>
-
           <div className="hero-copy">
-            <p className="eyebrow">Full-Stack Software Engineer</p>
+            <p className="eyebrow">Software Engineer · Full Stack · Backend</p>
             <h1 id="hero-title">
-              Hi, I&apos;m <span>Sarang Pidadi</span>. I build scalable software
-              products.
+              I build <span>software systems</span> that scale from product idea
+              to production.
             </h1>
             <p className="hero-summary">
-              I work across frontend, backend, architecture, and product
-              development with a focus on SaaS, enterprise applications, and
-              business software.
+              I&apos;m Sarang Pidadi, a full-stack software engineer working
+              across frontend, backend, APIs, data, security, and product
+              architecture.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
-                View my work
+                Explore selected work
               </a>
               <a className="text-link" href="#contact">
-                Get in touch <span aria-hidden="true">↗</span>
+                Contact <span aria-hidden="true">↗</span>
               </a>
             </div>
+            <div className="hero-stack" aria-label="Primary technology stack">
+              <span>TypeScript</span>
+              <span>React</span>
+              <span>Next.js</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>Supabase</span>
+            </div>
+          </div>
+
+          <div className="developer-console" aria-hidden="true">
+            <div className="console-bar">
+              <div className="console-dots">
+                <span />
+                <span />
+                <span />
+              </div>
+              <span>engineer.ts</span>
+            </div>
+            <pre className="console-code">
+              <code>
+                <span className="code-muted">01</span>{" "}
+                <span className="code-keyword">const</span> engineer = {"{"}
+                {"\n"}
+                <span className="code-muted">02</span>{"   "}name:{" "}
+                <span className="code-string">&quot;Sarang Pidadi&quot;</span>,
+                {"\n"}
+                <span className="code-muted">03</span>{"   "}focus: [
+                <span className="code-string">&quot;SaaS&quot;</span>,{" "}
+                <span className="code-string">&quot;Enterprise&quot;</span>,{" "}
+                <span className="code-string">&quot;Product&quot;</span>],
+                {"\n"}
+                <span className="code-muted">04</span>{"   "}strengths: [
+                <span className="code-string">&quot;Architecture&quot;</span>,{" "}
+                <span className="code-string">&quot;APIs&quot;</span>,{" "}
+                <span className="code-string">&quot;Data&quot;</span>],
+                {"\n"}
+                <span className="code-muted">05</span>{"   "}principles: [
+                <span className="code-string">&quot;secure&quot;</span>,{" "}
+                <span className="code-string">&quot;maintainable&quot;</span>,{" "}
+                <span className="code-string">&quot;scalable&quot;</span>],
+                {"\n"}
+                <span className="code-muted">06</span> {"}"};
+                {"\n\n"}
+                <span className="code-muted">07</span>{" "}
+                <span className="code-comment">
+                  // build → measure → refine
+                </span>
+                <span className="code-caret">▋</span>
+              </code>
+            </pre>
           </div>
         </section>
 
@@ -300,8 +339,8 @@ export default function Home() {
           <section id="technology" className="section shell">
             <div className="section-heading-row technology-heading">
               <div>
-                <p className="section-kicker">Technology</p>
-                <h2>Tools I use to build.</h2>
+                <p className="section-kicker">Engineering stack</p>
+                <h2>Technologies behind the systems.</h2>
               </div>
               <p className="section-intro">
                 A practical stack shaped by product requirements rather than
@@ -310,12 +349,20 @@ export default function Home() {
             </div>
 
             <div className="technology-grid">
-              {technologies.map((technology) => (
+              {technologies.map((technology, index) => (
                 <article key={technology.group}>
-                  <h3>{technology.group}</h3>
+                  <div className="technology-title">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <h3>{technology.group}</h3>
+                  </div>
                   <ul>
                     {technology.items.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>
+                        <span className="tech-prompt" aria-hidden="true">
+                          &gt;
+                        </span>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </article>

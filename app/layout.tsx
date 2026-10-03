@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   description:
     "Full-stack software engineer building scalable web applications, SaaS platforms, and business software with TypeScript, React, Next.js, Node.js, PostgreSQL, and Supabase.",
   authors: [{ name: "Sarang Pidadi" }],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Sarang Pidadi — Full-Stack Software Engineer",
     description:

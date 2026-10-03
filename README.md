@@ -12,7 +12,7 @@ Personal software engineering portfolio built with Next.js, React, TypeScript, a
 
 Run npm run build.
 
-Next.js exports the production site to the out directory. Deployment is intentionally manual; this repository does not use GitHub Actions or CI/CD.
+Next.js exports the production site to the `out` directory. Deployment is intentionally manual; this repository does not use GitHub Actions or CI/CD. Publish the generated static files to the GitHub Pages publishing branch when a release is ready.
 
 ## Design direction
 

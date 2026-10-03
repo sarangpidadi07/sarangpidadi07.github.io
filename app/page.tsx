@@ -13,19 +13,27 @@ const buildSteps = [
 const technologies = [
   {
     group: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "SQL"],
+    items: ["TypeScript", "JavaScript", "PHP", "SQL"],
   },
   {
     group: "Frontend",
     items: ["React", "Next.js", "HTML5", "CSS3", "SPFx"],
   },
   {
-    group: "Backend & Data",
-    items: ["Node.js", "REST APIs", "PostgreSQL", "Supabase", "MySQL"],
+    group: "Backend & APIs",
+    items: ["Node.js", "REST APIs", "Laravel", "Microsoft Graph API"],
   },
   {
-    group: "Platforms & Tools",
-    items: ["Git", "GitHub", "Docker", "AWS", "Vercel"],
+    group: "Data & Security",
+    items: ["PostgreSQL", "MySQL", "Supabase", "SQL Migrations", "RLS"],
+  },
+  {
+    group: "Microsoft & Platforms",
+    items: ["Entra ID", "SharePoint Online", "Power Automate", "Coveo Cloud", "Vercel"],
+  },
+  {
+    group: "Engineering",
+    items: ["Git", "GitHub", "GitLab", "CI/CD", "Jest", "Enzyme"],
   },
 ];
 

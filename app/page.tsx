@@ -173,12 +173,13 @@ export default function Home() {
                 <p className="pill">Featured project</p>
                 <h2>Astrybit</h2>
                 <p className="project-subtitle">
-                  Business management and POS infrastructure for modern
-                  businesses.
+                  An India-first, configurable business operating system for
+                  single-location and multi-branch organizations.
                 </p>
               </div>
               <div className="project-meta">
                 <span>Next.js</span>
+                <span>React</span>
                 <span>TypeScript</span>
                 <span>Supabase</span>
                 <span>PostgreSQL</span>
@@ -187,7 +188,8 @@ export default function Home() {
 
             <div
               className="project-visual"
-              aria-label="Abstract Astrybit interface preview"
+              role="img"
+              aria-label="Illustrative Astrybit product interface preview"
             >
               <div className="browser-bar">
                 <div className="browser-dots" aria-hidden="true">
@@ -245,36 +247,40 @@ export default function Home() {
               <article>
                 <h3>Product</h3>
                 <p>
-                  A multi-tenant platform for businesses ranging from
-                  independent operators to multi-branch organizations, bringing
-                  operational workflows into one configurable system.
+                  A configurable business operating system designed to support
+                  businesses from a single-owner shop through multi-branch
+                  organizations without requiring a separate product or schema
+                  for each business category.
                 </p>
               </article>
 
               <article>
                 <h3>Architecture</h3>
                 <p>
-                  Designed around organizations, branches, modular capabilities,
-                  reusable workflows, and a PostgreSQL model intended to support
-                  long-term product growth.
+                  Built as a modular monolith using the Next.js App Router,
+                  server-first application boundaries, explicit domain services,
+                  scoped repositories, Supabase Auth, and PostgreSQL with
+                  versioned SQL migrations.
                 </p>
               </article>
 
               <article>
-                <h3>Data & Security</h3>
+                <h3>Tenancy & Security</h3>
                 <p>
-                  Supabase authentication, authorization, SQL migrations,
-                  tenant isolation, and PostgreSQL Row-Level Security form the
-                  core data-access foundation.
+                  The organization is the tenant boundary, with branch-scoped
+                  access layered underneath. Membership-derived authorization,
+                  role and permission checks, composite constraints, and
+                  PostgreSQL Row-Level Security enforce isolation.
                 </p>
               </article>
 
               <article>
-                <h3>Core Systems</h3>
+                <h3>Business Systems</h3>
                 <p>
-                  Work spans POS transactions, inventory, resources, sessions,
-                  memberships, business configuration, and related operational
-                  workflows.
+                  Reusable capabilities cover catalogue, customers, orders,
+                  payments, inventory and purchasing, resources, sessions and
+                  bookings, memberships, packages, loyalty, and configurable
+                  category-driven workflows.
                 </p>
               </article>
             </div>
@@ -282,9 +288,9 @@ export default function Home() {
             <div className="project-note">
               <span>01</span>
               <p>
-                Astrybit is under active development. The product source remains
-                private; this portfolio focuses on the engineering decisions and
-                systems behind it.
+                Astrybit is under active development. The source repository is
+                private; this case study focuses on the product architecture,
+                tenancy model, security boundaries, and reusable business systems.
               </p>
             </div>
           </section>

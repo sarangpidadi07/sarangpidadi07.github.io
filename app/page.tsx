@@ -35,6 +35,15 @@ const buildSteps = [
   },
 ];
 
+const projectFacts = [
+  "Multi-tenant",
+  "Modular monolith",
+  "Organization + branch scope",
+  "PostgreSQL RLS",
+  "Next.js App Router",
+  "Supabase Auth",
+];
+
 const technologies = [
   {
     group: "Languages",
@@ -116,12 +125,12 @@ export default function Home() {
                 preserveAspectRatio="none"
                 aria-hidden="true"
               >
-                <path d="M260 208 L132 92" />
-                <path d="M260 208 L388 92" />
-                <path d="M260 208 L92 218" />
-                <path d="M260 208 L428 218" />
-                <path d="M260 208 L142 336" />
-                <path d="M260 208 L378 336" />
+                <path className="flow-path flow-path-1" d="M260 208 L132 92" />
+                <path className="flow-path flow-path-2" d="M260 208 L388 92" />
+                <path className="flow-path flow-path-3" d="M260 208 L92 218" />
+                <path className="flow-path flow-path-4" d="M260 208 L428 218" />
+                <path className="flow-path flow-path-5" d="M260 208 L142 336" />
+                <path className="flow-path flow-path-6" d="M260 208 L378 336" />
               </svg>
 
               <div className="system-core">
@@ -132,27 +141,27 @@ export default function Home() {
                 <small>turn intent into a system</small>
               </div>
 
-              <div className="system-node node-architecture">
+              <div className="system-node node-architecture seq-1">
                 <LineIcon name="architecture" size={18} />
                 <span>Architecture</span>
               </div>
-              <div className="system-node node-interface">
+              <div className="system-node node-interface seq-2">
                 <LineIcon name="code" size={18} />
                 <span>Interface</span>
               </div>
-              <div className="system-node node-api">
+              <div className="system-node node-api seq-3">
                 <LineIcon name="code" size={18} />
                 <span>APIs</span>
               </div>
-              <div className="system-node node-data">
+              <div className="system-node node-data seq-4">
                 <LineIcon name="architecture" size={18} />
                 <span>Data</span>
               </div>
-              <div className="system-node node-security">
+              <div className="system-node node-security seq-5">
                 <LineIcon name="shield" size={18} />
                 <span>Security</span>
               </div>
-              <div className="system-node node-ship">
+              <div className="system-node node-ship seq-6">
                 <LineIcon name="scale" size={18} />
                 <span>Ship & scale</span>
               </div>
@@ -207,10 +216,9 @@ export default function Home() {
 
             <div className="timeline" aria-label="Professional experience">
               <article className="timeline-item">
+                <p className="experience-type">Product engineering</p>
                 <h3>Astrybit</h3>
-                <p className="timeline-role">
-                  Independent Software Engineer (Full Stack)
-                </p>
+                <p className="timeline-role">Independent Product Engineering</p>
                 <p>
                   Architecting and building a multi-tenant business management
                   platform with Next.js, React, TypeScript, Supabase/PostgreSQL,
@@ -219,9 +227,13 @@ export default function Home() {
                 </p>
               </article>
 
-              <article className="timeline-item">
+              <article className="timeline-item timeline-item-featured">
+                <p className="experience-type">Enterprise engineering</p>
                 <h3>Dell Technologies</h3>
                 <p className="timeline-role">Software Engineer 1</p>
+                <p className="experience-context">
+                  Inside Dell · Enterprise employee platform
+                </p>
                 <p>
                   Worked on Inside Dell, including React/SPFx experiences,
                   Microsoft Entra ID and Graph integrations, persistent
@@ -231,6 +243,7 @@ export default function Home() {
               </article>
 
               <article className="timeline-item">
+                <p className="experience-type">Backend engineering</p>
                 <h3>Vebsigns</h3>
                 <p className="timeline-role">Software Developer / Intern</p>
                 <p>
@@ -261,7 +274,10 @@ export default function Home() {
 
             <ol className="build-flow">
               {buildSteps.map((step, index) => (
-                <li key={step.title}>
+                <li
+                  key={step.title}
+                  className={"build-step build-step-" + (index + 1)}
+                >
                   <div className="build-card-top">
                     <span className="build-number">
                       {String(index + 1).padStart(2, "0")}
@@ -272,6 +288,9 @@ export default function Home() {
                   </div>
                   <strong>{step.title}</strong>
                   <p>{step.detail}</p>
+                  {index < buildSteps.length - 1 && (
+                    <span className="build-connector" aria-hidden="true">→</span>
+                  )}
                 </li>
               ))}
             </ol>
@@ -296,6 +315,12 @@ export default function Home() {
                 <span>Supabase</span>
                 <span>PostgreSQL</span>
               </div>
+            </div>
+
+            <div className="project-facts" aria-label="Astrybit engineering facts">
+              {projectFacts.map((fact) => (
+                <span key={fact}>{fact}</span>
+              ))}
             </div>
 
             <div
@@ -527,7 +552,8 @@ export default function Home() {
       <footer className="site-footer">
         <div className="shell">
           <span>© {new Date().getFullYear()} Sarang Pidadi</span>
-          <a href="#top">Back to top ↑</a>
+          <span>Built with Next.js + TypeScript</span>
+          <a href="#top" aria-label="Back to top">↑</a>
         </div>
       </footer>
     </>

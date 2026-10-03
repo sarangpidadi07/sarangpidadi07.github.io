@@ -42,6 +42,7 @@ export default function SiteHeader() {
           type="button"
           aria-expanded={open}
           aria-controls="site-navigation"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setOpen((value) => !value)}
         >
           <span>{open ? "Close" : "Menu"}</span>

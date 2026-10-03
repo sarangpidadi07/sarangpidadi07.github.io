@@ -3,22 +3,54 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#work", label: "Work" },
-  { href: "#technology", label: "Technology" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "About", index: "01" },
+  { href: "#experience", label: "Experience", index: "02" },
+  { href: "#work", label: "Work", index: "03" },
+  { href: "#technology", label: "Technology", index: "04" },
+  { href: "#contact", label: "Contact", index: "05" },
 ];
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("");
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 16);
+
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0);
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = links
+      .map((link) => document.querySelector(link.href))
+      .filter((section): section is Element => Boolean(section));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible?.target.id) setActive("#" + visible.target.id);
+      },
+      {
+        rootMargin: "-28% 0px -58% 0px",
+        threshold: [0, 0.05, 0.2],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -32,6 +64,11 @@ export default function SiteHeader() {
 
   return (
     <header className={scrolled ? "site-header is-scrolled" : "site-header"}>
+      <span
+        className="scroll-progress"
+        aria-hidden="true"
+        style={{ transform: "scaleX(" + progress + ")" }}
+      />
       <div className="shell header-inner">
         <a className="brand" href="#top" aria-label="Sarang Pidadi, back to top">
           Sarang Pidadi<span>.</span>
@@ -54,8 +91,15 @@ export default function SiteHeader() {
           aria-label="Primary navigation"
         >
           {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
-              {link.label}
+            <a
+              key={link.href}
+              href={link.href}
+              className={active === link.href ? "is-active" : ""}
+              aria-current={active === link.href ? "location" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              <span className="nav-index" aria-hidden="true">{link.index}</span>
+              <span>{link.label}</span>
             </a>
           ))}
         </nav>

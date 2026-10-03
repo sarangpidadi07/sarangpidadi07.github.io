@@ -2063,3 +2063,46 @@ button:focus-visible {
     opacity: 1;
   }
 }
+
+
+@media (min-width: 761px) and (max-width: 1120px) {
+  .build-step-4 {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .build-step-5 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .build-step-6 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .build-step-3 .build-connector {
+    display: grid;
+    top: auto;
+    right: 50%;
+    bottom: -18px;
+    transform: translateX(50%) rotate(90deg);
+  }
+
+  .build-step-4 .build-connector,
+  .build-step-5 .build-connector {
+    display: grid;
+    left: -12px;
+    right: auto;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .build-step-4,
+  .build-step-5,
+  .build-step-6 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

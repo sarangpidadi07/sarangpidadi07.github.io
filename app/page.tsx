@@ -70,15 +70,13 @@ export default function Home() {
       <main id="top">
         <section className="hero shell" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">Software Engineer · Full Stack · Backend</p>
+            <p className="eyebrow">Full-Stack Software Engineer</p>
             <h1 id="hero-title">
-              I build <span>software systems</span> that scale from product idea
-              to production.
+              Sarang <span>Pidadi</span>
             </h1>
             <p className="hero-summary">
-              I&apos;m Sarang Pidadi, a full-stack software engineer working
-              across frontend, backend, APIs, data, security, and product
-              architecture.
+              I design and build scalable software products across frontend,
+              backend, APIs, data, security, and product architecture.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
@@ -199,7 +197,7 @@ export default function Home() {
             <div className="section-heading-row">
               <div>
                 <p className="section-kicker">Experience</p>
-                <h2>Professional journey.</h2>
+                <h2>Where I&apos;ve built software.</h2>
               </div>
               <p className="section-intro">
                 Enterprise software, product development, and full-stack
@@ -284,7 +282,7 @@ export default function Home() {
           <section id="work" className="section shell work-section">
             <div className="project-topline">
               <div>
-                <p className="pill">Featured project</p>
+                <p className="pill">Selected project · 01</p>
                 <h2>Astrybit</h2>
                 <p className="project-subtitle">
                   An India-first, configurable business operating system for
@@ -415,7 +413,7 @@ export default function Home() {
             <div className="section-heading-row technology-heading">
               <div>
                 <p className="section-kicker">Engineering stack</p>
-                <h2>Technologies behind the systems.</h2>
+                <h2>Tools I use to build.</h2>
               </div>
               <p className="section-intro">
                 A practical stack shaped by product requirements rather than

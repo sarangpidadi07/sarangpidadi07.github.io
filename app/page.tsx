@@ -134,7 +134,7 @@ export default function Home() {
 
               <article className="timeline-item">
                 <p className="timeline-date">Jan 2021 — Oct 2021</p>
-                <h3>VebSigns</h3>
+                <h3>Vebsigns</h3>
                 <p className="timeline-role">Software Developer / Intern</p>
                 <p>
                   Progressed from intern to developer while building Laravel and
@@ -214,16 +214,16 @@ export default function Home() {
                   </div>
                   <div className="mock-grid">
                     <div className="mock-card">
-                      <small>Today</small>
-                      <strong>₹ 24,860</strong>
+                      <small>Operations</small>
+                      <strong>Point of sale</strong>
                     </div>
                     <div className="mock-card">
-                      <small>Orders</small>
-                      <strong>128</strong>
+                      <small>Inventory</small>
+                      <strong>Stock control</strong>
                     </div>
                     <div className="mock-card">
-                      <small>Locations</small>
-                      <strong>04</strong>
+                      <small>Organization</small>
+                      <strong>Multi-branch</strong>
                     </div>
                   </div>
                   <div className="mock-content">

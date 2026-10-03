@@ -79,7 +79,7 @@ export default function Home() {
       <main id="top">
         <section className="hero shell" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">Full-Stack Software Engineer</p>
+            <p className="eyebrow">Enterprise software · SaaS products · Full-stack engineering</p>
             <h1 id="hero-title">
               Sarang <span>Pidadi</span>
             </h1>

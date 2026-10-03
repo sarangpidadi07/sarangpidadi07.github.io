@@ -107,36 +107,39 @@ export default function Home() {
 
             <div className="timeline" aria-label="Professional experience">
               <article className="timeline-item">
-                <p className="timeline-date">2021 — 2025</p>
-                <h3>Dell Technologies</h3>
-                <p className="timeline-role">Software Engineer I</p>
-                <p>
-                  Contributed to Inside Dell, the company-wide internal employee
-                  platform, across React/SPFx experiences, Microsoft Graph and
-                  Entra ID integrations, enterprise search, reusable navigation,
-                  and supporting services.
-                </p>
-              </article>
-
-              <article className="timeline-item">
-                <p className="timeline-date">2025 — Present</p>
+                <p className="timeline-date">Apr 2025 — Present</p>
                 <h3>Astrybit</h3>
-                <p className="timeline-role">Independent Product Engineering</p>
+                <p className="timeline-role">
+                  Independent Software Engineer (Full Stack)
+                </p>
                 <p>
-                  Designing and building a multi-tenant business management and
-                  POS platform using Next.js, TypeScript, Supabase, and
-                  PostgreSQL.
+                  Architecting and building a multi-tenant business management
+                  platform with Next.js, React, TypeScript, Supabase/PostgreSQL,
+                  and end-to-end ownership across application architecture,
+                  data, security, and product workflows.
                 </p>
               </article>
 
               <article className="timeline-item">
-                <p className="timeline-date">2021</p>
+                <p className="timeline-date">Dec 2021 — Mar 2025</p>
+                <h3>Dell Technologies</h3>
+                <p className="timeline-role">Software Engineer 1</p>
+                <p>
+                  Worked on Inside Dell, including React/SPFx experiences,
+                  Microsoft Entra ID and Graph integrations, persistent
+                  navigation, supporting microservices, enterprise search with
+                  Coveo Cloud, and internal automation.
+                </p>
+              </article>
+
+              <article className="timeline-item">
+                <p className="timeline-date">Jan 2021 — Oct 2021</p>
                 <h3>VebSigns</h3>
                 <p className="timeline-role">Software Developer / Intern</p>
                 <p>
-                  Built Laravel and MySQL APIs, admin workflows, payment and
-                  transaction features, and backend services supporting mobile
-                  applications.
+                  Progressed from intern to developer while building Laravel and
+                  MySQL REST APIs, admin panels, payment and transaction
+                  workflows, and backend services consumed by mobile apps.
                 </p>
               </article>
             </div>
@@ -320,12 +323,20 @@ export default function Home() {
             <div>
               <p className="section-kicker">Education</p>
               <h2>Master of Computer Applications</h2>
-              <p>Savitribai Phule Pune University · 2021 · 8.3 CGPA</p>
+              <p>
+                Savitribai Phule Pune University · 2021 · 8.3 CGPA
+                <br />
+                Indira College of Engineering and Management, Pune
+              </p>
             </div>
             <div>
               <p className="section-kicker">Certification</p>
-              <h2>AWS Technical Essentials</h2>
-              <p>Simplilearn</p>
+              <h2>Professional Certifications</h2>
+              <p>
+                AWS Technical Essentials — Simplilearn
+                <br />
+                Python Bootcamp — Udemy
+              </p>
             </div>
           </section>
         </Reveal>

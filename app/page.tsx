@@ -1,0 +1,376 @@
+import Reveal from "@/components/Reveal";
+import SiteHeader from "@/components/SiteHeader";
+
+const buildSteps = [
+  "Understand",
+  "Architecture",
+  "Data & APIs",
+  "Interface",
+  "Build",
+  "Refine",
+];
+
+const technologies = [
+  {
+    group: "Languages",
+    items: ["TypeScript", "JavaScript", "Python", "SQL"],
+  },
+  {
+    group: "Frontend",
+    items: ["React", "Next.js", "HTML5", "CSS3", "SPFx"],
+  },
+  {
+    group: "Backend & Data",
+    items: ["Node.js", "REST APIs", "PostgreSQL", "Supabase", "MySQL"],
+  },
+  {
+    group: "Platforms & Tools",
+    items: ["Git", "GitHub", "Docker", "AWS", "Vercel"],
+  },
+];
+
+export default function Home() {
+  return (
+    <>
+      <SiteHeader />
+
+      <main id="top">
+        <section className="hero shell" aria-labelledby="hero-title">
+          <div className="hero-photo-wrap" aria-hidden="true">
+            <div className="hero-photo-shape">
+              <img
+                className="hero-photo"
+                src="/images/profile.jpg"
+                alt=""
+                width="520"
+                height="520"
+              />
+            </div>
+          </div>
+
+          <div className="hero-copy">
+            <p className="eyebrow">Full-Stack Software Engineer</p>
+            <h1 id="hero-title">
+              Hi, I&apos;m <span>Sarang Pidadi</span>. I build scalable software
+              products.
+            </h1>
+            <p className="hero-summary">
+              I work across frontend, backend, architecture, and product
+              development with a focus on SaaS, enterprise applications, and
+              business software.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-primary" href="#work">
+                View my work
+              </a>
+              <a className="text-link" href="#contact">
+                Get in touch <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <Reveal>
+          <section id="about" className="section shell about-section">
+            <div>
+              <p className="section-kicker">About</p>
+              <h2>Engineering products from idea to implementation.</h2>
+            </div>
+            <div className="about-copy">
+              <p>
+                I&apos;m an India-based software engineer focused on building
+                modern web applications and software products that are useful,
+                maintainable, and designed to scale.
+              </p>
+              <p>
+                My work spans system architecture, database design, APIs,
+                authentication, user interfaces, enterprise integrations, and
+                developer workflows. I prefer simple solutions, clear
+                boundaries, and technology choices that serve the product.
+              </p>
+            </div>
+          </section>
+        </Reveal>
+
+        <Reveal>
+          <section id="experience" className="section shell">
+            <div className="section-heading-row">
+              <div>
+                <p className="section-kicker">Experience</p>
+                <h2>Professional journey.</h2>
+              </div>
+              <p className="section-intro">
+                Enterprise software, product development, and full-stack
+                engineering.
+              </p>
+            </div>
+
+            <div className="timeline" aria-label="Professional experience">
+              <article className="timeline-item">
+                <p className="timeline-date">2021 — 2025</p>
+                <h3>Dell Technologies</h3>
+                <p className="timeline-role">Software Engineer I</p>
+                <p>
+                  Contributed to Inside Dell, the company-wide internal employee
+                  platform, across React/SPFx experiences, Microsoft Graph and
+                  Entra ID integrations, enterprise search, reusable navigation,
+                  and supporting services.
+                </p>
+              </article>
+
+              <article className="timeline-item">
+                <p className="timeline-date">2025 — Present</p>
+                <h3>Astrybit</h3>
+                <p className="timeline-role">Independent Product Engineering</p>
+                <p>
+                  Designing and building a multi-tenant business management and
+                  POS platform using Next.js, TypeScript, Supabase, and
+                  PostgreSQL.
+                </p>
+              </article>
+
+              <article className="timeline-item">
+                <p className="timeline-date">2021</p>
+                <h3>VebSigns</h3>
+                <p className="timeline-role">Software Developer / Intern</p>
+                <p>
+                  Built Laravel and MySQL APIs, admin workflows, payment and
+                  transaction features, and backend services supporting mobile
+                  applications.
+                </p>
+              </article>
+            </div>
+          </section>
+        </Reveal>
+
+        <section className="build-section">
+          <Reveal className="shell">
+            <div className="build-heading">
+              <p className="section-kicker section-kicker-light">
+                How I build
+              </p>
+              <h2>From problem to product.</h2>
+            </div>
+
+            <ol className="build-flow">
+              {buildSteps.map((step, index) => (
+                <li key={step}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{step}</strong>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
+        </section>
+
+        <Reveal>
+          <section id="work" className="section shell work-section">
+            <div className="project-topline">
+              <div>
+                <p className="pill">Featured project</p>
+                <h2>Astrybit</h2>
+                <p className="project-subtitle">
+                  Business management and POS infrastructure for modern
+                  businesses.
+                </p>
+              </div>
+              <div className="project-meta">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>Supabase</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+
+            <div
+              className="project-visual"
+              aria-label="Abstract Astrybit interface preview"
+            >
+              <div className="browser-bar">
+                <div className="browser-dots" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <span className="browser-address">astrybit / operations</span>
+              </div>
+              <div className="dashboard">
+                <aside className="dashboard-side">
+                  <div className="mock-logo">A</div>
+                  <span className="mock-line is-active" />
+                  <span className="mock-line" />
+                  <span className="mock-line" />
+                  <span className="mock-line" />
+                </aside>
+                <div className="dashboard-main">
+                  <div className="mock-heading">
+                    <span />
+                    <span />
+                  </div>
+                  <div className="mock-grid">
+                    <div className="mock-card">
+                      <small>Today</small>
+                      <strong>₹ 24,860</strong>
+                    </div>
+                    <div className="mock-card">
+                      <small>Orders</small>
+                      <strong>128</strong>
+                    </div>
+                    <div className="mock-card">
+                      <small>Locations</small>
+                      <strong>04</strong>
+                    </div>
+                  </div>
+                  <div className="mock-content">
+                    <div className="mock-table">
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                    <div className="mock-panel">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="case-grid">
+              <article>
+                <h3>Product</h3>
+                <p>
+                  A multi-tenant platform for businesses ranging from
+                  independent operators to multi-branch organizations, bringing
+                  operational workflows into one configurable system.
+                </p>
+              </article>
+
+              <article>
+                <h3>Architecture</h3>
+                <p>
+                  Designed around organizations, branches, modular capabilities,
+                  reusable workflows, and a PostgreSQL model intended to support
+                  long-term product growth.
+                </p>
+              </article>
+
+              <article>
+                <h3>Data & Security</h3>
+                <p>
+                  Supabase authentication, authorization, SQL migrations,
+                  tenant isolation, and PostgreSQL Row-Level Security form the
+                  core data-access foundation.
+                </p>
+              </article>
+
+              <article>
+                <h3>Core Systems</h3>
+                <p>
+                  Work spans POS transactions, inventory, resources, sessions,
+                  memberships, business configuration, and related operational
+                  workflows.
+                </p>
+              </article>
+            </div>
+
+            <div className="project-note">
+              <span>01</span>
+              <p>
+                Astrybit is under active development. The product source remains
+                private; this portfolio focuses on the engineering decisions and
+                systems behind it.
+              </p>
+            </div>
+          </section>
+        </Reveal>
+
+        <Reveal>
+          <section id="technology" className="section shell">
+            <div className="section-heading-row technology-heading">
+              <div>
+                <p className="section-kicker">Technology</p>
+                <h2>Tools I use to build.</h2>
+              </div>
+              <p className="section-intro">
+                A practical stack shaped by product requirements rather than
+                technology for its own sake.
+              </p>
+            </div>
+
+            <div className="technology-grid">
+              {technologies.map((technology) => (
+                <article key={technology.group}>
+                  <h3>{technology.group}</h3>
+                  <ul>
+                    {technology.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+        </Reveal>
+
+        <Reveal>
+          <section className="section shell credentials">
+            <div>
+              <p className="section-kicker">Education</p>
+              <h2>Master of Computer Applications</h2>
+              <p>Savitribai Phule Pune University · 2021 · 8.3 CGPA</p>
+            </div>
+            <div>
+              <p className="section-kicker">Certification</p>
+              <h2>AWS Technical Essentials</h2>
+              <p>Simplilearn</p>
+            </div>
+          </section>
+        </Reveal>
+
+        <section id="contact" className="contact-section">
+          <div className="contact-mark" aria-hidden="true">
+            <span />
+          </div>
+          <Reveal className="shell contact-inner">
+            <p className="section-kicker section-kicker-light">Contact</p>
+            <h2>
+              Let&apos;s talk<span>.</span>
+            </h2>
+            <p className="contact-copy">
+              Have an opportunity, project, or interesting engineering problem?
+            </p>
+            <div className="contact-links">
+              <a href="mailto:sarangpidadi07@gmail.com">
+                Email <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sarang-pidadi-144160116/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://github.com/sarangpidadi07"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </Reveal>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <div className="shell">
+          <span>© {new Date().getFullYear()} Sarang Pidadi</span>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </footer>
+    </>
+  );
+}

@@ -1,4 +1,5 @@
 import LineIcon from "@/components/LineIcon";
+import NeuralBuildSystem from "@/components/NeuralBuildSystem";
 import Reveal from "@/components/Reveal";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -100,78 +101,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="system-visual"
-            role="img"
-            aria-label="Animated software build system showing an idea becoming architecture, interfaces, APIs, data, security, and a shipped product"
-          >
-            <div className="system-visual-header">
-              <span>Software build system</span>
-              <span className="system-status">
-                <i aria-hidden="true" />
-                iterating
-              </span>
-            </div>
-
-            <div className="system-canvas">
-              <svg
-                className="system-lines"
-                viewBox="0 0 520 420"
-                preserveAspectRatio="none"
-                aria-hidden="true"
-              >
-                <path className="flow-path flow-path-1" d="M260 208 L132 92" />
-                <path className="flow-path flow-path-2" d="M260 208 L388 92" />
-                <path className="flow-path flow-path-3" d="M260 208 L92 218" />
-                <path className="flow-path flow-path-4" d="M260 208 L428 218" />
-                <path className="flow-path flow-path-5" d="M260 208 L142 336" />
-                <path className="flow-path flow-path-6" d="M260 208 L378 336" />
-              </svg>
-
-              <div className="system-core">
-                <span className="system-core-icon">
-                  <LineIcon name="idea" size={22} />
-                </span>
-                <strong>Product idea</strong>
-                <small>turn intent into a system</small>
-              </div>
-
-              <div className="system-node node-architecture seq-1">
-                <LineIcon name="architecture" size={18} />
-                <span>Architecture</span>
-              </div>
-              <div className="system-node node-interface seq-2">
-                <LineIcon name="code" size={18} />
-                <span>Interface</span>
-              </div>
-              <div className="system-node node-api seq-3">
-                <LineIcon name="code" size={18} />
-                <span>APIs</span>
-              </div>
-              <div className="system-node node-data seq-4">
-                <LineIcon name="architecture" size={18} />
-                <span>Data</span>
-              </div>
-              <div className="system-node node-security seq-5">
-                <LineIcon name="shield" size={18} />
-                <span>Security</span>
-              </div>
-              <div className="system-node node-ship seq-6">
-                <LineIcon name="scale" size={18} />
-                <span>Ship & scale</span>
-              </div>
-
-              <span className="system-pulse pulse-a" aria-hidden="true" />
-              <span className="system-pulse pulse-b" aria-hidden="true" />
-              <span className="system-pulse pulse-c" aria-hidden="true" />
-            </div>
-
-            <div className="system-visual-footer">
-              <span>01 invent</span>
-              <span>02 engineer</span>
-              <span>03 improve</span>
-            </div>
-          </div>
+          <NeuralBuildSystem />
+/div>
         </section>
 
         <Reveal>

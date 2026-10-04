@@ -56,8 +56,10 @@ export default function Home() {
         <section className="hero shell" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">Enterprise software · SaaS products · Full-stack engineering</p>
-            <h1 id="hero-title">
-              Sarang <span>Pidadi</span>
+            <h1 id="hero-title" className="hero-name">
+              <span className="hero-name-first">Sarang</span>
+              <span className="hero-name-last">Pidadi</span>
+              <span className="hero-name-accent" aria-hidden="true" />
             </h1>
             <p className="hero-summary">
               I design and build scalable software products across frontend,

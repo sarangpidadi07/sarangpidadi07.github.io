@@ -63,6 +63,13 @@ export default function SiteHeader() {
       if (event.key === "Escape") setOpen(false);
     };
 
+    const desktop = window.matchMedia("(min-width: 761px)");
+    const onViewportChange = () => {
+      if (desktop.matches) setOpen(false);
+    };
+
+    desktop.addEventListener("change", onViewportChange);
+
     if (open) {
       window.addEventListener("keydown", onKeyDown);
       document.body.classList.add("nav-open");
@@ -72,6 +79,7 @@ export default function SiteHeader() {
 
     return () => {
       window.removeEventListener("keydown", onKeyDown);
+      desktop.removeEventListener("change", onViewportChange);
       document.body.classList.remove("nav-open");
     };
   }, [open]);

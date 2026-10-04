@@ -6,7 +6,7 @@ const links = [
   { href: "#about", label: "About", index: "01" },
   { href: "#experience", label: "Experience", index: "02" },
   { href: "#work", label: "Work", index: "03" },
-  { href: "#technology", label: "Technology", index: "04" },
+  { href: "#technology", label: "Stack", index: "04" },
   { href: "#contact", label: "Contact", index: "05" },
 ];
 
@@ -37,6 +37,11 @@ export default function SiteHeader() {
 
     const observer = new IntersectionObserver(
       (entries) => {
+        if (window.scrollY < window.innerHeight * 0.58) {
+          setActive("");
+          return;
+        }
+
         const visible = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];

@@ -46,28 +46,23 @@ const projectFacts = [
 
 const technologies = [
   {
-    group: "Languages",
-    items: ["TypeScript", "JavaScript", "PHP", "SQL"],
+    group: "Core stack",
+    items: ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "Supabase"],
   },
   {
-    group: "Frontend",
-    items: ["React", "Next.js", "HTML5", "CSS3", "SPFx"],
+    group: "Enterprise & integrations",
+    items: [
+      "SPFx / SharePoint",
+      "Microsoft Graph",
+      "Entra ID",
+      "Coveo Cloud",
+      "Laravel / MySQL",
+      "REST APIs",
+    ],
   },
   {
-    group: "Backend & APIs",
-    items: ["Node.js", "REST APIs", "Laravel", "Microsoft Graph API"],
-  },
-  {
-    group: "Data & Security",
-    items: ["PostgreSQL", "MySQL", "Supabase", "SQL Migrations", "RLS"],
-  },
-  {
-    group: "Microsoft & Platforms",
-    items: ["Entra ID", "SharePoint Online", "Power Automate", "Coveo Cloud", "Vercel"],
-  },
-  {
-    group: "Engineering",
-    items: ["Git", "GitHub", "GitLab", "CI/CD", "Jest", "Enzyme"],
+    group: "Engineering & delivery",
+    items: ["Git / GitHub / GitLab", "CI/CD", "SQL Migrations", "RLS", "Jest", "Vercel"],
   },
 ];
 
@@ -183,19 +178,14 @@ export default function Home() {
           <section id="about" className="section shell about-section">
             <div>
               <p className="section-kicker">About</p>
-              <h2>Engineering products from idea to implementation.</h2>
+              <h2>Useful software. Strong foundations.</h2>
             </div>
             <div className="about-copy">
               <p>
-                I&apos;m an India-based software engineer focused on building
-                modern web applications and software products that are useful,
-                maintainable, and designed to scale.
-              </p>
-              <p>
-                My work spans system architecture, database design, APIs,
-                authentication, user interfaces, enterprise integrations, and
-                developer workflows. I prefer simple solutions, clear
-                boundaries, and technology choices that serve the product.
+                I&apos;m a full-stack software engineer focused on scalable web
+                products, enterprise applications, and SaaS. I work across
+                architecture, data, APIs, security, and interfaces, with a
+                preference for simple systems that stay maintainable as they grow.
               </p>
             </div>
           </section>
@@ -220,10 +210,9 @@ export default function Home() {
                 <h3>Astrybit</h3>
                 <p className="timeline-role">Independent Product Engineering</p>
                 <p>
-                  Architecting and building a multi-tenant business management
-                  platform with Next.js, React, TypeScript, Supabase/PostgreSQL,
-                  and end-to-end ownership across application architecture,
-                  data, security, and product workflows.
+                  Building a multi-tenant business platform with Next.js,
+                  TypeScript, Supabase, and PostgreSQL, with ownership across
+                  architecture, data, security, and product workflows.
                 </p>
               </article>
 
@@ -235,10 +224,9 @@ export default function Home() {
                   Inside Dell · Enterprise employee platform
                 </p>
                 <p>
-                  Worked on Inside Dell, including React/SPFx experiences,
-                  Microsoft Entra ID and Graph integrations, persistent
-                  navigation, supporting microservices, enterprise search with
-                  Coveo Cloud, and internal automation.
+                  Built and improved Inside Dell experiences across React/SPFx,
+                  Microsoft Graph and Entra ID integrations, enterprise search,
+                  navigation, supporting services, and automation.
                 </p>
               </article>
 
@@ -247,9 +235,8 @@ export default function Home() {
                 <h3>Vebsigns</h3>
                 <p className="timeline-role">Software Developer / Intern</p>
                 <p>
-                  Progressed from intern to developer while building Laravel and
-                  MySQL REST APIs, admin panels, payment and transaction
-                  workflows, and backend services consumed by mobile apps.
+                  Built Laravel/MySQL REST APIs, admin workflows, payments,
+                  transactions, and backend services consumed by mobile apps.
                 </p>
               </article>
             </div>
@@ -481,8 +468,8 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <p className="section-kicker">Certification</p>
-              <h2>Professional Certifications</h2>
+              <p className="section-kicker">Certifications</p>
+              <h2>Continuous learning</h2>
               <p>
                 AWS Technical Essentials — Simplilearn
                 <br />
@@ -496,7 +483,10 @@ export default function Home() {
           <Reveal className="shell contact-inner">
             <div className="contact-copy-block">
               <p className="section-kicker">Contact</p>
-              <h2>Let&apos;s build something useful.</h2>
+              <h2>
+                <span>Let&apos;s build</span>
+                <span>something useful.</span>
+              </h2>
               <p className="contact-copy">
                 Open to software engineering opportunities, product work, and
                 interesting technical problems.

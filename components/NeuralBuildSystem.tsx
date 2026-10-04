@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 import LineIcon from "@/components/LineIcon";
 
 const nodes = [
@@ -121,7 +123,7 @@ export default function NeuralBuildSystem() {
           <div
             key={node.label}
             className={"neural-node " + node.className}
-            style={{ "--node-delay": node.delay } as React.CSSProperties}
+            style={{ "--node-delay": node.delay } as CSSProperties}
           >
             <span className="neural-node-orbit" aria-hidden="true" />
             <span className="neural-node-icon">

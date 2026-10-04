@@ -2989,3 +2989,395 @@ button:focus-visible {
     animation: none !important;
   }
 }
+
+
+/* Hero identity + system intelligence map refinement */
+
+.hero-name {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.13em;
+  white-space: nowrap;
+  font-size: clamp(66px, 8.4vw, 104px) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.072em !important;
+  isolation: isolate;
+}
+
+.hero-name-first,
+.hero-name-last {
+  position: relative;
+  display: inline-block;
+  animation: name-word-reveal 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-name-first {
+  color: #f3f6f7 !important;
+  font-weight: 700;
+}
+
+.hero-name-last {
+  color: transparent !important;
+  font-weight: 800;
+  background: linear-gradient(110deg, #43bdd8 0%, #6ed8e9 55%, #4ec5df 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0 0 38px rgba(85, 199, 223, 0.07);
+  animation-delay: 90ms;
+}
+
+.hero-name-last::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 1%;
+  bottom: -10px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(85, 199, 223, 0.72), transparent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: name-line-in 900ms 360ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-name-accent {
+  position: absolute;
+  right: -15px;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(85, 199, 223, 0.05);
+  animation: name-accent-pulse 3.4s 900ms ease-in-out infinite;
+}
+
+.neural-system {
+  width: min(100%, 500px);
+}
+
+.neural-caption {
+  width: min(100%, 420px);
+  margin-bottom: -4px;
+  color: rgba(169, 179, 183, 0.58);
+  font-size: 7.5px;
+}
+
+.neural-status {
+  color: rgba(169, 179, 183, 0.58);
+}
+
+.neural-stage {
+  width: min(100%, 420px);
+  overflow: visible;
+}
+
+.neural-aura {
+  width: 72%;
+  background:
+    radial-gradient(circle, rgba(85, 199, 223, 0.09) 0%, rgba(85, 199, 223, 0.028) 36%, transparent 69%);
+  filter: blur(14px);
+}
+
+.neural-scan {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg 320deg,
+      rgba(85, 199, 223, 0.03) 333deg,
+      rgba(85, 199, 223, 0.22) 348deg,
+      transparent 360deg
+    );
+  mask: radial-gradient(circle, transparent 0 52%, #000 54% 100%);
+  -webkit-mask: radial-gradient(circle, transparent 0 52%, #000 54% 100%);
+  animation: intelligence-scan 9s linear infinite;
+  pointer-events: none;
+}
+
+.neural-ring-outer {
+  width: 80%;
+  opacity: 0.72;
+}
+
+.neural-ring-middle {
+  width: 61%;
+  opacity: 0.76;
+}
+
+.neural-ring-inner {
+  width: 41%;
+  opacity: 0.86;
+}
+
+.feedback-loop path {
+  fill: none;
+  stroke: rgba(85, 199, 223, 0.19);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-dasharray: 4 8;
+  animation: feedback-flow 8s linear infinite;
+}
+
+.feedback-loop path:nth-child(2n) {
+  animation-delay: -2.6s;
+}
+
+.feedback-loop path:nth-child(3n) {
+  animation-delay: -5.1s;
+}
+
+.attention-web path {
+  stroke: rgba(85, 199, 223, 0.2);
+}
+
+.attention-cross path {
+  stroke: rgba(85, 199, 223, 0.065);
+}
+
+.activation-cloud circle {
+  opacity: 0.75;
+}
+
+.neural-core {
+  width: 122px;
+  height: 122px;
+  gap: 4px;
+  border-color: rgba(85, 199, 223, 0.38);
+  box-shadow:
+    0 0 0 8px rgba(85, 199, 223, 0.018),
+    0 0 48px rgba(85, 199, 223, 0.1);
+}
+
+.neural-core::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 1px solid rgba(85, 199, 223, 0.08);
+  border-radius: 50%;
+  animation: ring-spin-reverse 22s linear infinite;
+}
+
+.brain-mark {
+  width: 50px;
+  height: 39px;
+}
+
+.neural-core strong {
+  font-size: 12px;
+}
+
+.neural-core small {
+  max-width: 90px;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 6.2px;
+}
+
+.neural-node {
+  width: 82px;
+  min-width: 82px;
+  gap: 5px;
+}
+
+.neural-node-icon {
+  width: 39px;
+  height: 39px;
+  border-color: rgba(85, 199, 223, 0.28);
+  background:
+    radial-gradient(circle at 50% 30%, rgba(85, 199, 223, 0.11), transparent 62%),
+    rgba(15, 20, 22, 0.96);
+}
+
+.neural-node-copy small {
+  font-size: 6.2px;
+  letter-spacing: 0.02em;
+}
+
+.neural-node-copy strong {
+  margin-top: 2px;
+  color: #e5ebed;
+  font-size: 8px;
+}
+
+.neural-node-1 { left: 10%; top: 9%; }
+.neural-node-2 { right: 10%; top: 9%; }
+.neural-node-3 { left: -2%; top: 42%; }
+.neural-node-4 { right: -2%; top: 42%; }
+.neural-node-5 { left: 10%; bottom: 7%; }
+.neural-node-6 { right: 10%; bottom: 7%; }
+
+.neural-cycle {
+  margin-top: -7px;
+  gap: 7px;
+  color: rgba(169, 179, 183, 0.56);
+  font-size: 6.8px;
+}
+
+@keyframes name-word-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+@keyframes name-line-in {
+  to { transform: scaleX(1); }
+}
+
+@keyframes name-accent-pulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.8);
+    box-shadow: 0 0 0 4px rgba(85, 199, 223, 0.03);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(85, 199, 223, 0.055);
+  }
+}
+
+@keyframes intelligence-scan {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes feedback-flow {
+  from { stroke-dashoffset: 72; }
+  to { stroke-dashoffset: 0; }
+}
+
+@media (max-width: 760px) {
+  .hero-name {
+    margin-inline: 0;
+    justify-content: flex-start;
+    font-size: clamp(45px, 13.6vw, 58px) !important;
+    letter-spacing: -0.066em !important;
+  }
+
+  .hero-name-last::after {
+    bottom: -7px;
+  }
+
+  .hero-name-accent {
+    right: -10px;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .neural-system {
+    max-width: 286px;
+  }
+
+  .neural-caption {
+    width: 100%;
+    font-size: 6.4px;
+  }
+
+  .neural-stage {
+    width: 252px;
+    max-width: 252px;
+  }
+
+  .neural-core {
+    width: 86px;
+    height: 86px;
+  }
+
+  .brain-mark {
+    width: 38px;
+    height: 30px;
+  }
+
+  .neural-core strong {
+    font-size: 9.5px;
+  }
+
+  .neural-core small {
+    max-width: 72px;
+    font-size: 5.3px;
+  }
+
+  .neural-node {
+    width: 54px;
+    min-width: 54px;
+    gap: 3px;
+  }
+
+  .neural-node-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .neural-node-copy small {
+    display: none;
+  }
+
+  .neural-node-copy strong {
+    margin-top: 2px;
+    font-size: 6.2px;
+  }
+
+  .neural-cycle {
+    gap: 4px;
+    font-size: 5.7px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-name {
+    font-size: clamp(43px, 13.2vw, 53px) !important;
+  }
+
+  .neural-system {
+    max-width: 276px;
+  }
+
+  .neural-stage {
+    width: 244px;
+    max-width: 244px;
+  }
+
+  .neural-caption {
+    padding-inline: 3px;
+  }
+
+  .neural-cycle span:nth-of-type(4),
+  .neural-cycle i:nth-of-type(4) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-name-first,
+  .hero-name-last,
+  .hero-name-last::after,
+  .hero-name-accent,
+  .neural-scan,
+  .feedback-loop path,
+  .neural-core::before {
+    animation: none !important;
+  }
+
+  .hero-name-last::after {
+    transform: scaleX(1);
+  }
+}

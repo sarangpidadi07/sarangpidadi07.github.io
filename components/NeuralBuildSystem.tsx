@@ -16,7 +16,7 @@ export default function NeuralBuildSystem() {
       role="img"
       aria-label="Animated circular software build system showing Understand, Design, Build, Secure, Refine, and Scale around a central product core"
     >
-      <div className="neural-system-topbar">
+      <div className="neural-caption">
         <span>Software build system</span>
         <span className="neural-status">
           <i aria-hidden="true" />
@@ -25,8 +25,10 @@ export default function NeuralBuildSystem() {
       </div>
 
       <div className="neural-stage">
-        <div className="neural-glow" aria-hidden="true" />
+        <div className="neural-halo neural-halo-a" aria-hidden="true" />
+        <div className="neural-halo neural-halo-b" aria-hidden="true" />
         <div className="neural-ring neural-ring-outer" aria-hidden="true" />
+        <div className="neural-ring neural-ring-middle" aria-hidden="true" />
         <div className="neural-ring neural-ring-inner" aria-hidden="true" />
 
         <svg
@@ -34,15 +36,6 @@ export default function NeuralBuildSystem() {
           viewBox="0 0 600 600"
           aria-hidden="true"
         >
-          <defs>
-            <radialGradient id="brainGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="rgba(85,199,223,0.42)" />
-              <stop offset="100%" stopColor="rgba(85,199,223,0)" />
-            </radialGradient>
-          </defs>
-
-          <circle cx="300" cy="300" r="84" fill="url(#brainGlow)" opacity="0.38" />
-
           <path className="neural-link link-1" d="M300 300 C235 255 206 210 180 145" />
           <path className="neural-link link-2" d="M300 300 C360 252 395 205 420 145" />
           <path className="neural-link link-3" d="M300 300 C205 300 150 300 94 300" />
@@ -53,6 +46,7 @@ export default function NeuralBuildSystem() {
           <path className="neural-arc arc-1" d="M180 145 C300 80 420 145 506 300" />
           <path className="neural-arc arc-2" d="M506 300 C420 455 300 520 180 455" />
           <path className="neural-arc arc-3" d="M180 455 C92 378 82 230 180 145" />
+          <path className="neural-arc arc-4" d="M180 145 C110 230 110 370 180 455" />
 
           <circle className="signal signal-1" r="5">
             <animateMotion dur="4.8s" repeatCount="indefinite" path="M300 300 C235 255 206 210 180 145" />
@@ -74,18 +68,20 @@ export default function NeuralBuildSystem() {
             <span />
             <span />
           </div>
-          <span className="neural-core-icon">
-            <LineIcon name="idea" size={26} />
-          </span>
+          <div className="neural-brain" aria-hidden="true">
+            <span className="brain-lobe brain-lobe-left" />
+            <span className="brain-lobe brain-lobe-right" />
+            <span className="brain-node brain-node-1" />
+            <span className="brain-node brain-node-2" />
+            <span className="brain-node brain-node-3" />
+            <span className="brain-node brain-node-4" />
+          </div>
           <strong>Product core</strong>
           <small>idea → system → value</small>
         </div>
 
         {nodes.map((node, index) => (
-          <div
-            key={node.label}
-            className={"neural-node " + node.className}
-          >
+          <div key={node.label} className={"neural-node " + node.className}>
             <span className="neural-node-icon">
               <LineIcon name={node.icon} size={18} />
             </span>
@@ -103,13 +99,13 @@ export default function NeuralBuildSystem() {
         <span className="neural-synapse synapse-5" aria-hidden="true" />
       </div>
 
-      <div className="neural-system-footer">
+      <div className="neural-cycle" aria-hidden="true">
         <span>Think</span>
-        <i aria-hidden="true">→</i>
+        <i>→</i>
         <span>Engineer</span>
-        <i aria-hidden="true">→</i>
+        <i>→</i>
         <span>Ship</span>
-        <i aria-hidden="true">→</i>
+        <i>→</i>
         <span>Learn</span>
       </div>
     </div>

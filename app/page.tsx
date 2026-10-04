@@ -1,3 +1,4 @@
+import EngineeringStack from "@/components/EngineeringStack";
 import LineIcon from "@/components/LineIcon";
 import NeuralBuildSystem from "@/components/NeuralBuildSystem";
 import Reveal from "@/components/Reveal";
@@ -45,27 +46,6 @@ const projectFacts = [
   "Supabase Auth",
 ];
 
-const technologies = [
-  {
-    group: "Core stack",
-    items: ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "Supabase"],
-  },
-  {
-    group: "Enterprise & integrations",
-    items: [
-      "SPFx / SharePoint",
-      "Microsoft Graph",
-      "Entra ID",
-      "Coveo Cloud",
-      "Laravel / MySQL",
-      "REST APIs",
-    ],
-  },
-  {
-    group: "Engineering & delivery",
-    items: ["Git / GitHub / GitLab", "CI/CD", "SQL Migrations", "RLS", "Jest", "Vercel"],
-  },
-];
 
 export default function Home() {
   return (
@@ -363,26 +343,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="technology-grid">
-              {technologies.map((technology, index) => (
-                <article key={technology.group}>
-                  <div className="technology-title">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <h3>{technology.group}</h3>
-                  </div>
-                  <ul>
-                    {technology.items.map((item) => (
-                      <li key={item}>
-                        <span className="tech-prompt" aria-hidden="true">
-                          &gt;
-                        </span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
+            <EngineeringStack />
           </section>
         </Reveal>
 

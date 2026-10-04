@@ -4,26 +4,42 @@ Personal software engineering portfolio built with Next.js, React, TypeScript, a
 
 ## Local development
 
-1. Install dependencies with npm install.
-2. Start the development server with npm run dev.
-3. Open http://localhost:3000.
+1. Install dependencies with `npm install`.
+2. Start the development server with `npm run dev`.
+3. Open `http://localhost:3000`.
 
-## Static build
+## Production build
 
-Run npm run build.
+Run:
 
-Next.js exports the production site to the `out` directory. Deployment is intentionally manual; this repository does not use GitHub Actions or CI/CD. Publish the generated static files to the GitHub Pages publishing branch when a release is ready.
+```bash
+npm run build
+```
+
+Next.js statically exports the site to the `out` directory.
+
+Deployment is intentionally manual. This repository does not use GitHub Actions or CI/CD for the portfolio.
 
 ## Design direction
 
-The portfolio uses a minimal editorial layout inspired by the visual language of the School of UX portfolio reference, adapted specifically for a software engineer: strong typography, generous whitespace, restrained cyan accents, project-focused content, and subtle motion.
+The portfolio uses a dark, minimal software-engineering visual system with strong typography, restrained cyan accents, responsive project-focused layouts, and subtle motion. The hero includes a neural/attention-inspired software build visualization that adapts for desktop and mobile.
 
 ## Current content
 
 - About
+- Astrybit independent product engineering
 - Dell Technologies / Inside Dell experience
+- Vebsigns experience
+- Connected engineering workflow
 - Astrybit engineering case study
-- VebSigns experience
-- Technology stack
-- Education and certification
+- Engineering stack
+- Education and certifications
 - Contact
+
+## Accessibility and responsive behavior
+
+- Keyboard-visible focus states
+- Reduced-motion support
+- Responsive full-screen mobile navigation
+- Mobile-first project and stack layouts
+- Minimum supported layout width: 320px

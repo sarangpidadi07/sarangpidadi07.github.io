@@ -9,12 +9,16 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://sarangpidadi07.github.io"),
   title: {
-    default: "Sarang Pidadi — Full-Stack Software Engineer",
-    template: "%s — Sarang Pidadi",
+    default: "Sarang Pidadi",
+    template: "%s | Sarang Pidadi",
   },
   description:
     "Full-stack software engineer building scalable web applications, SaaS platforms, and business software with TypeScript, React, Next.js, Node.js, PostgreSQL, and Supabase.",
   authors: [{ name: "Sarang Pidadi" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
   alternates: {
     canonical: "/",
   },
@@ -23,7 +27,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Sarang Pidadi — Full-Stack Software Engineer",
+    title: "Sarang Pidadi",
     description:
       "Full-stack software engineer focused on scalable SaaS products, enterprise applications, and business software.",
     url: "https://sarangpidadi07.github.io",

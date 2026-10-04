@@ -102,7 +102,6 @@ export default function Home() {
           </div>
 
           <NeuralBuildSystem />
-/div>
         </section>
 
         <Reveal>

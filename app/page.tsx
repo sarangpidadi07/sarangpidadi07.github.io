@@ -54,36 +54,54 @@ export default function Home() {
 
       <main id="top">
         <section className="hero shell" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <p className="eyebrow">Enterprise software · SaaS products · Full-stack engineering</p>
-            <h1 id="hero-title" className="hero-name">
-              <span className="hero-name-first">Sarang</span>
-              <span className="hero-name-last">Pidadi</span>
-              <span className="hero-name-accent" aria-hidden="true" />
-            </h1>
-            <p className="hero-summary">
-              I design and build scalable software products across frontend,
-              backend, APIs, data, security, and product architecture.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#work">
-                Explore selected work
-              </a>
-              <a className="text-link" href="#contact">
-                Contact <span aria-hidden="true">↗</span>
-              </a>
+          <div className="hero-intelligence">
+            <div className="hero-grid" aria-hidden="true" />
+            <div className="hero-signal hero-signal-left" aria-hidden="true" />
+            <div className="hero-signal hero-signal-right" aria-hidden="true" />
+
+            <div className="hero-copy">
+              <p className="eyebrow">Enterprise software · SaaS products · Full-stack engineering</p>
+              <h1 id="hero-title" className="hero-name">
+                <span className="hero-name-first">Sarang</span>
+                <span className="hero-name-last">Pidadi</span>
+                <span className="hero-name-accent" aria-hidden="true" />
+              </h1>
+              <p className="hero-summary">
+                I design and build scalable software products across frontend,
+                backend, APIs, data, security, and product architecture.
+              </p>
+              <div className="hero-actions">
+                <a className="button button-primary" href="#work">
+                  Explore selected work
+                </a>
+                <a className="text-link" href="#contact">
+                  Contact <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
-            <div className="hero-stack" aria-label="Primary technology stack">
-              <span>TypeScript</span>
-              <span>React</span>
-              <span>Next.js</span>
-              <span>Node.js</span>
-              <span>PostgreSQL</span>
-              <span>Supabase</span>
+
+            <div className="hero-system">
+              <div className="hero-system-rail" aria-hidden="true">
+                <span>01 / product intent</span>
+                <span className="hero-system-live"><i /> adaptive loop</span>
+                <span>06 / shipped value</span>
+              </div>
+
+              <NeuralBuildSystem />
+
+              <div className="hero-toolchain" aria-label="Primary technology stack">
+                <span className="hero-toolchain-label">Execution layer</span>
+                <div className="hero-stack">
+                  <span>TypeScript</span>
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>Node.js</span>
+                  <span>PostgreSQL</span>
+                  <span>Supabase</span>
+                </div>
+              </div>
             </div>
           </div>
-
-          <NeuralBuildSystem />
         </section>
 
         <Reveal>

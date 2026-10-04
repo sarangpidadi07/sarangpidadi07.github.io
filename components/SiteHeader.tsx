@@ -59,12 +59,21 @@ export default function SiteHeader() {
   }, []);
 
   useEffect(() => {
-    if (!open) return;
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(false);
     };
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+
+    if (open) {
+      window.addEventListener("keydown", onKeyDown);
+      document.body.classList.add("nav-open");
+    } else {
+      document.body.classList.remove("nav-open");
+    }
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.classList.remove("nav-open");
+    };
   }, [open]);
 
   return (
@@ -87,6 +96,10 @@ export default function SiteHeader() {
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setOpen((value) => !value)}
         >
+          <span className="menu-icon" aria-hidden="true">
+            <i />
+            <i />
+          </span>
           <span>{open ? "Close" : "Menu"}</span>
         </button>
 

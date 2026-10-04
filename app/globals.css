@@ -2106,3 +2106,343 @@ button:focus-visible {
     grid-row: auto;
   }
 }
+
+
+/* Final density, typography, workflow, and mobile polish */
+:root {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --muted: #aab3b7;
+  --muted-2: #7b8589;
+}
+
+body,
+p {
+  font-family: var(--font-sans);
+}
+
+.scroll-progress {
+  height: 1px;
+  opacity: 0.34;
+}
+
+/* Reduce page length without losing breathing room. */
+.section {
+  padding-block: clamp(78px, 8vw, 116px);
+}
+
+.hero {
+  padding-bottom: 54px;
+}
+
+.about-section {
+  padding-top: clamp(68px, 7vw, 92px);
+  padding-bottom: clamp(72px, 7vw, 94px);
+}
+
+#experience.section {
+  padding-top: clamp(76px, 7vw, 100px);
+}
+
+.build-section {
+  padding-block: clamp(78px, 8vw, 108px);
+}
+
+.work-section {
+  padding-top: clamp(84px, 8vw, 112px);
+  padding-bottom: clamp(82px, 8vw, 110px);
+}
+
+#technology.section {
+  padding-top: clamp(82px, 8vw, 108px);
+  padding-bottom: clamp(66px, 6vw, 84px);
+}
+
+.credentials {
+  padding-top: 0;
+  padding-bottom: clamp(76px, 7vw, 94px);
+}
+
+.contact-section {
+  padding-block: clamp(82px, 8vw, 104px);
+}
+
+/* About should support the hero, not repeat it. */
+.about-section {
+  max-width: 850px;
+}
+
+.about-copy {
+  max-width: 720px;
+  margin-top: 26px;
+}
+
+.about-copy p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Experience: keep Dell emphasis, remove duplicated badge. */
+.timeline-item {
+  min-height: 252px;
+}
+
+.timeline-item-featured::after {
+  display: none;
+}
+
+.experience-type {
+  margin-bottom: 14px;
+}
+
+.timeline-role {
+  margin-bottom: 14px;
+}
+
+.timeline-item p:last-child {
+  color: var(--muted);
+}
+
+/* Connected workflow: one path, not six arrow buttons. */
+.build-flow {
+  position: relative;
+  isolation: isolate;
+}
+
+.build-flow::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 4%;
+  right: 4%;
+  top: 58px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(85, 199, 223, 0.1),
+    rgba(85, 199, 223, 0.65),
+    rgba(85, 199, 223, 0.1)
+  );
+  transform-origin: left center;
+  animation: workflow-line 3.8s ease-in-out infinite alternate;
+}
+
+.build-flow li {
+  z-index: 1;
+}
+
+.build-connector {
+  display: none !important;
+}
+
+.build-flow p {
+  color: #aeb7bb;
+  font-size: 13px;
+  line-height: 1.68;
+}
+
+/* Compress case-study cards and let the engineering facts do more work. */
+.case-grid article {
+  min-height: 180px;
+  padding: 24px 26px;
+}
+
+.case-grid p {
+  color: var(--muted);
+}
+
+.project-facts span {
+  border-color: rgba(85, 199, 223, 0.14);
+  background: rgba(85, 199, 223, 0.025);
+}
+
+/* Three-tier skills hierarchy. */
+.technology-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.technology-grid article {
+  min-height: 300px;
+}
+
+.technology-grid li {
+  color: #aeb7bb;
+}
+
+/* Background should not compete with Work or Experience. */
+.credentials > div {
+  padding: 26px 28px;
+}
+
+.credentials h2 {
+  font-size: clamp(25px, 2.7vw, 36px);
+  line-height: 1.05;
+}
+
+.credentials p:last-child {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+/* Deliberate two-line contact heading. */
+.contact-section h2 span {
+  display: block;
+}
+
+.contact-copy {
+  color: var(--muted);
+}
+
+@keyframes workflow-line {
+  from {
+    opacity: 0.35;
+    transform: scaleX(0.18);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 1120px) {
+  .build-flow::before {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-grid article {
+    min-height: auto;
+  }
+
+  .credentials {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .section,
+  .build-section,
+  .contact-section {
+    padding-block: 66px;
+  }
+
+  .hero {
+    padding-bottom: 46px;
+  }
+
+  .about-section {
+    padding-top: 58px;
+    padding-bottom: 64px;
+  }
+
+  .section h2,
+  .build-section h2 {
+    font-size: clamp(34px, 10.5vw, 50px);
+  }
+
+  .about-copy p,
+  .timeline-item p:last-child,
+  .case-grid p,
+  .contact-copy {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .timeline-item {
+    min-height: auto;
+  }
+
+  .build-flow {
+    padding-left: 0;
+  }
+
+  .build-flow::before {
+    display: block;
+    left: 36px;
+    right: auto;
+    top: 32px;
+    bottom: 32px;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(
+      180deg,
+      rgba(85, 199, 223, 0.12),
+      rgba(85, 199, 223, 0.58),
+      rgba(85, 199, 223, 0.12)
+    );
+    transform: none;
+    animation: none;
+  }
+
+  .build-flow li {
+    padding: 20px 20px 20px 70px;
+  }
+
+  .build-card-top {
+    left: 18px;
+    top: 18px;
+  }
+
+  .build-flow p {
+    font-size: 14px;
+  }
+
+  .case-grid article {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .technology-grid article {
+    padding: 20px;
+  }
+
+  .credentials {
+    grid-template-columns: 1fr;
+    padding-bottom: 64px;
+  }
+
+  .credentials > div {
+    padding: 22px;
+  }
+
+  .credentials h2 {
+    font-size: 28px;
+  }
+
+  .contact-section {
+    padding-top: 70px;
+    padding-bottom: 78px;
+  }
+
+  .contact-section h2 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-summary,
+  .about-copy p,
+  .timeline-item p:last-child,
+  .case-grid p,
+  .contact-copy {
+    font-size: 15.5px;
+  }
+
+  .project-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-facts span {
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+  }
+}
